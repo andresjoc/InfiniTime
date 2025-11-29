@@ -460,11 +460,13 @@ list(APPEND SOURCE_FILES
         components/ble/MusicService.cpp
         components/ble/SimpleWeatherService.cpp
         components/ble/NavigationService.cpp
+        components/ble/HeartRateRawService.cpp
         components/ble/BatteryInformationService.cpp
         components/ble/FSService.cpp
         components/ble/ImmediateAlertService.cpp
         components/ble/ServiceDiscovery.cpp
         components/ble/HeartRateService.cpp
+        components/settings/SettingsHrs.cpp
         components/ble/MotionService.cpp
         components/firmwarevalidator/FirmwareValidator.cpp
         components/motor/MotorController.cpp
@@ -527,6 +529,7 @@ list(APPEND RECOVERY_SOURCE_FILES
         components/ble/AlertNotificationClient.cpp
         components/ble/DfuService.cpp
         components/ble/CurrentTimeService.cpp
+        components/ble/HeartRateRawService.cpp
         components/ble/AlertNotificationService.cpp
         components/ble/MusicService.cpp
         components/ble/SimpleWeatherService.cpp
@@ -539,6 +542,7 @@ list(APPEND RECOVERY_SOURCE_FILES
         components/ble/MotionService.cpp
         components/firmwarevalidator/FirmwareValidator.cpp
         components/settings/Settings.cpp
+        components/settings/SettingsHrs.cpp
         components/timer/Timer.cpp
         components/stopwatch/StopWatchController.cpp
         components/alarm/AlarmController.cpp
@@ -655,10 +659,12 @@ set(INCLUDE_FILES
         components/ble/ImmediateAlertService.h
         components/ble/ServiceDiscovery.h
         components/ble/BleClient.h
+        components/ble/HeartRateRawService.h
         components/ble/HeartRateService.h
         components/ble/MotionService.h
         components/ble/SimpleWeatherService.h
         components/settings/Settings.h
+        components/settings/SettingsHrs.h        
         components/timer/Timer.h
         components/stopwatch/StopWatchController.h
         components/alarm/AlarmController.h

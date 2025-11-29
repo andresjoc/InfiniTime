@@ -15,6 +15,7 @@
 #include "components/ble/DeviceInformationService.h"
 #include "components/ble/DfuService.h"
 #include "components/ble/FSService.h"
+#include "components/ble/HeartRateRawService.h"
 #include "components/ble/HeartRateService.h"
 #include "components/ble/ImmediateAlertService.h"
 #include "components/ble/MusicService.h"
@@ -49,6 +50,7 @@ namespace Pinetime {
                        Pinetime::Drivers::SpiNorFlash& spiNorFlash,
                        HeartRateController& heartRateController,
                        MotionController& motionController,
+                       Ppg& ppg,
                        FS& fs);
       void Init();
       void StartAdvertising();
@@ -103,6 +105,7 @@ namespace Pinetime {
       NavigationService navService;
       BatteryInformationService batteryInformationService;
       ImmediateAlertService immediateAlertService;
+      HeartRateRawService heartRateRawService;
       HeartRateService heartRateService;
       MotionService motionService;
       FSService fsService;

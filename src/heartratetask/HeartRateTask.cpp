@@ -90,8 +90,9 @@ TickType_t HeartRateTask::CurrentTaskDelay() {
 
 HeartRateTask::HeartRateTask(Drivers::Hrs3300& heartRateSensor,
                              Controllers::HeartRateController& controller,
-                             Controllers::Settings& settings)
-  : heartRateSensor {heartRateSensor}, controller {controller}, settings {settings} {
+                             Controllers::Settings& settings,
+                             Controllers::Ppg& ppg)
+  : heartRateSensor {heartRateSensor}, controller {controller}, settings {settings}, ppg {ppg} {
 }
 
 void HeartRateTask::Start() {
