@@ -92,15 +92,15 @@ TimerHandle_t debounceTimer;
 TimerHandle_t debounceChargeTimer;
 Pinetime::Controllers::Battery batteryController;
 Pinetime::Controllers::Ble bleController;
+Pinetime::Controllers::Ppg ppg;
 
 Pinetime::Controllers::FS fs {spiNorFlash};
 Pinetime::Controllers::Settings settingsController {fs};
 Pinetime::Controllers::SettingsHrs settingsHrsController {fs};
 Pinetime::Drivers::Hrs3300 heartRateSensor {twiMaster, heartRateSensorTwiAddress, settingsHrsController};
-Pinetime::Applications::HeartRateTask heartRateApp(heartRateSensor, heartRateController, settingsHrsController, ppg);
-Pinetime::Controllers::MotorController motorController {};
 Pinetime::Controllers::HeartRateController heartRateController;
-Pinetime::Controllers::Ppg ppg;
+Pinetime::Applications::HeartRateTask heartRateApp(heartRateSensor, heartRateController, settingsController, ppg);
+Pinetime::Controllers::MotorController motorController {};
 
 Pinetime::Controllers::DateTime dateTimeController {settingsController};
 Pinetime::Drivers::Watchdog watchdog;
