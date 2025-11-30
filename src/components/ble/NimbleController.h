@@ -49,8 +49,8 @@ namespace Pinetime {
                        Battery& batteryController,
                        Pinetime::Drivers::SpiNorFlash& spiNorFlash,
                        HeartRateController& heartRateController,
-                       MotionController& motionController,
                        Ppg& ppg,
+                       MotionController& motionController,
                        FS& fs);
       void Init();
       void StartAdvertising();

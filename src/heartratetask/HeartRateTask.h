@@ -49,7 +49,6 @@ namespace Pinetime {
       Drivers::Hrs3300& heartRateSensor;
       Controllers::HeartRateController& controller;
       Controllers::Settings& settings;
-      Controllers::Ppg ppg;
       Controllers::Ppg& ppg;
       TickType_t lastMeasurementTime;
       TickType_t measurementStartTime;
