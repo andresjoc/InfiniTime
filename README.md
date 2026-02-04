@@ -20,6 +20,14 @@
 
 </div>
 
+## Fork notice
+
+This repository is a fork of the original [InfiniTime](https://github.com/InfiniTimeOrg/InfiniTime) project. It keeps the upstream structure while adding the following changes:
+
+- Exposes raw PPG samples over BLE via a dedicated HeartRateRaw service/characteristic for external data capture.
+- Adds persistent HRS3300 sensor settings stored in the filesystem (enable/drive configuration).
+- Wires the PPG pipeline through system initialization and task wiring so the raw data path is available alongside standard heart-rate processing.
+
 ## New to InfiniTime?
 
 - [Getting started with InfiniTime](doc/gettingStarted/gettingStarted-1.0.md)
